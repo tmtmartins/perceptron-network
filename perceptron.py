@@ -11,10 +11,7 @@ def update_weights(weights, learning_rate, obtained, row):
     return [old_weight + learning_rate * ((row['d'] - obtained) * row[f'x{index}']) for index, old_weight in enumerate(weights)]
 
 def is_wanted_equals_obtained(wanted, obtained):
-    if (wanted > 0 and obtained > 0) or (wanted < 0 and obtained < 0):
-        return True
-    else:
-        return False
+    return True if ((wanted > 0 and obtained > 0) or (wanted < 0 and obtained < 0)) else False
 
 def run_tests(synaptic_weights, df):
     predicted_values = []
