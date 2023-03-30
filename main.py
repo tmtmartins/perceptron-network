@@ -11,5 +11,5 @@ interactions_amount_limit = 500
 if __name__ == "__main__":
     with open('output.txt', 'a') as f:
         sys.stdout = f
-        print("\n\n1:")
+        print("\n\n5:")
         run(training_df, test_df, learning_rate, interactions_amount_limit)

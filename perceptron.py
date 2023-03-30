@@ -16,7 +16,7 @@ def is_wanted_equals_obtained(wanted, obtained):
 def run_tests(synaptic_weights, df):
     predicted_values = []
     for index, row in df.iterrows():
-        sample = calculate_sample(synaptic_weights, row[:-1])
+        sample = calculate_sample(synaptic_weights, row)
         predicted_values.append(sample)
     df['d_predicted'] = predicted_values
     return df
